@@ -11,7 +11,7 @@ import java.time.Duration;
 public class Hooks {
 
     @Before
-    public void setUp(){
+    public void setUp() {
         Driver.setDriver(DriverFactory.getDriver(PropertiesUtils.getBrowserType()));
         Driver.getDriverInstance().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
