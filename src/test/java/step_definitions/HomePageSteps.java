@@ -3,10 +3,8 @@ package step_definitions;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomePage;
 import utilities.Driver;
-import utilities.DriverFactory;
 
 import java.util.List;
 

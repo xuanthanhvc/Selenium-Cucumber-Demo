@@ -16,9 +16,12 @@ import org.junit.runner.RunWith;
         // if it is set to tru it won't run the test but just check if all steps are defined
         // if set to false it will run the tests regularly
         dryRun = false,
-        tags = "@js-tc3",
+        tags = "@passed",
         monochrome = true,
-        plugin = {"pretty", "html:target/html-reports/cucumber-reports.html" }
+        plugin = {"pretty",
+                "json:target/html-reports/cucumber-reports.json",
+                "html:target/html-reports/cucumber-reports.html",
+                "me.jvt.cucumber.report.PrettyReports:target/jvt-cucumber"}
 )
 public class TestRunner {
     // no code need inside of this class!
