@@ -22,6 +22,7 @@ public class DriverFactory {
         if (JenkinsCi.getSeleniumHubUrl() != null) {
             try {
                 ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless");
                 return new RemoteWebDriver(URI.create(JenkinsCi.getSeleniumHubUrl()).toURL(), options);
             } catch (MalformedURLException e) {
                 // TODO Handle exception here
